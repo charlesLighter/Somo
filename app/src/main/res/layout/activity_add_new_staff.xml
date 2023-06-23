@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivities.AddNewStaffActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edtStaffFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="40dp"
+        android:hint="First Name"
+        android:textSize="18sp"
+        android:textColor="@color/black">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtStaffLastName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Last Name"
+        android:textSize="18sp"
+        android:textColor="@color/black">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtStaffEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:textSize="18sp"
+        android:textColor="@color/black">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtStaffPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Password"
+        android:textSize="18sp"
+        android:textColor="@color/black">
+
+    </EditText>
+
+
+    <EditText
+        android:id="@+id/confimedPass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Confirm Password"
+        android:textSize="18sp"
+        android:textColor="@color/black">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btnRgstNewStaff"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="18sp">
+
+    </Button>
+
+
+
+</LinearLayout>

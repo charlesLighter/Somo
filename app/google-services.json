@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129888935349",
+    "project_id": "somo-bdc2d",
+    "storage_bucket": "somo-bdc2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129888935349:android:eab020b63125637c60cdfc",
+        "android_client_info": {
+          "package_name": "com.android.somo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBClR9GKGAa58Fny50j6JIQktHUG2K7jGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

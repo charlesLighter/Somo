@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.stem.StemClubFragment"
+    android:background="@color/white">
+
+
+    <!--Btn report new session -->
+    <RelativeLayout
+        android:id="@+id/btnRptNewSession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple_indigo"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="@string/txt_rpt_new_session"
+            android:fontFamily="sans-serif-condensed-medium">
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <!--Btn view reports -->
+    <RelativeLayout
+        android:id="@+id/btnViewReports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple_indigo"
+        android:gravity="center"
+        android:layout_below="@id/btnRptNewSession"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="@string/txt_view_reports"
+            android:fontFamily="sans-serif-condensed-medium">
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <!--Btn add staff -->
+    <RelativeLayout
+        android:id="@+id/btnAddNewStaff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple_indigo"
+        android:gravity="center"
+        android:layout_below="@id/btnViewReports"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="@string/txt_add_new_staff"
+            android:fontFamily="sans-serif-condensed-medium">
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <!--Btn add staff -->
+    <RelativeLayout
+        android:id="@+id/btnViewSubmittedReports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple_indigo"
+        android:gravity="center"
+        android:layout_below="@id/btnAddNewStaff"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="@string/txt_view_staff_reports"
+            android:fontFamily="sans-serif-condensed-medium">
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

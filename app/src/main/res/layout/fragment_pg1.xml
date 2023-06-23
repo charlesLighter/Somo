@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SharedFragments.FragmentPg1"
+    android:background="@color/white"
+    >
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Name -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="40dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="18sp"
+                android:textColor="@color/teal_700"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- -"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+        <!-- Role -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/hintRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Role"
+                android:textSize="18sp"
+                android:textColor="@color/teal_700"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/roleRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/hintRole"
+                android:layout_marginStart="10dp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonTrainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trainer"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/radioBtnSupport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Support Fellow"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <!-- Date-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Date"
+                android:textSize="18sp"
+                android:textColor="@color/teal_700">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/btnSelectDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="Select date"
+                android:textSize="18sp"
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <!-- School-->
+        <EditText
+            android:id="@+id/edtSchoolName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter School Name">
+
+        </EditText>
+
+        <!-- Topic-->
+        <EditText
+            android:id="@+id/edtTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:hint="Topic Covered">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/txtSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            android:textColor="@color/purple_200"
+            android:padding="5dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+
+
+
+    </LinearLayout>
+
+    
+
+</FrameLayout>

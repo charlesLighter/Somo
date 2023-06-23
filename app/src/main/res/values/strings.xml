@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Somo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="menu_stem_club">Stem Club</string>
+    <string name="menu_next_code">Next Code</string>
+    <string name="menu_sifa">SIFA</string>
+
+    <!-- Buttons -->
+    <string name="txt_rpt_new_session">Report New Session</string>
+    <string name="txt_view_reports">View Your Reports</string>
+    <string name="txt_add_new_staff">Add New Staff</string>
+    <string name="txt_view_staff_reports">View Submitted Reports</string>
+    <string name="staff">Staff</string>
+    <string name="admin">Admin</string>
+
+    <string name="txt_login_header">Please login to continue</string>
+
+    <string name="login_logo_desc">Somo Logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- Schools-->
+
+    <string name="session_overview_desc">Provide a brief overview of what was covered during the session, including key concepts, activities, and any materials or resources used</string>
+    <string name="student_engagement_desc">Describe the level of engagement and participation observed among the students during the session. Were they actively involved in discussions, hands-on activities, and project work</string>
+    <string name="skills_desc">Outline the specific skills and concepts that were demonstrated by the students during the session. Highlight any notable achievements or areas where improvement is needed</string>
+    <string name="project_progress_desc">Detail the progress made by the students on their projects related to the sessions topic. Indicate whether the projects were completed or if there are any ongoing tasks or milestones</string>
+    <string name="challenges_encountered_des">Identify any challenges or difficulties faced by the students during the session. This could include technical issues, conceptual hurdles, or other obstacles they encountered while working on their projects</string>
+    <string name="support_guidance_desc">Explain the support and guidance provided by the trainers to help students overcome challenges and further their understanding of the topic. Include any resources, references, or one-on-one assistance offered</string>
+    <string name="next_step_desc">Specify the next steps for the students, including upcoming topics, project objectives, or assignments. Provide guidance on how they can continue their learning and progress</string>
+    <string name="feedback_and_suggestion_desc">Include any feedback or suggestions for improvement based on the session, such as adjustments to activities, resources, or teaching strategies</string>
+
+
+</resources>
