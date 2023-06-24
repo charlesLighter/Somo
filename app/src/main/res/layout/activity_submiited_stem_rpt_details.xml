@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SharedFragments.SubRptFragment"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:paddingStart="7dp"
+    android:paddingEnd="7dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="STEM Club Session Report"
+                android:textColor="@color/black"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <!-- Name -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Name"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="- -"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <!-- Role -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Role"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="- -"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <!-- School -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="School"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtSchool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="- -"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <!-- Date -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Date of Session"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="- -"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <!-- Topic -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Topic Covered"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtTopic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="- -"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <!-- Session overview -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Session Overview"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="16sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_700"
+                    android:text="@string/session_overview_desc">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtSessionOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Student Engagement-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Engagement and Participation"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="16sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_700"
+                    android:text="@string/student_engagement_desc">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtStudentEngagement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <!-- Skills and concepts demonstrated-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skills and Concepts Demonstrated"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="16sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_700"
+                    android:text="@string/skills_desc">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtSkillsDemonstrated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <!-- Project Progress and Completion -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Project Progress and Completion"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="16sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_700"
+                    android:text="@string/project_progress_desc">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtProjectCompletion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Challenges Encountered -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Challenges Encountered"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="16sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_700"
+                    android:text="@string/challenges_encountered_des">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtChallenges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <!--Support and Guidance Provided-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Support and Guidance Provided"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="16sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_700"
+                    android:text="@string/support_guidance_desc">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <!-- Next Steps -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next Steps"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="16sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_700"
+                    android:text="@string/next_step_desc">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtNextSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <!-- Feedback and suggestion-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feedback and Suggestions"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="16sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_700"
+                    android:text="@string/feedback_and_suggestion_desc">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/warningFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="Field can't be blank!"
+                    android:visibility="gone">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="15dp">
+                </TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
