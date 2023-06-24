@@ -15,6 +15,20 @@
         android:theme="@style/Theme.Somo"
         tools:targetApi="31">
         <activity
+            android:name=".AdminActivities.SubmittedStemRptDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AdminActivities.SubmittedStemRptsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".StaffActivities.StemRptDetailsActivity"
             android:exported="false">
             <meta-data

@@ -7,4 +7,5 @@ public class Constants {
     public static final String SUPPORT_FELLOW = "Support Fellow";
     public static final String STAFF_REPORTS = "Staff_Reports";
     public static final String SUBMITTED_REPORTS = "Submitted_Reports";
+    public static final String STAFF = "Staff";
 }

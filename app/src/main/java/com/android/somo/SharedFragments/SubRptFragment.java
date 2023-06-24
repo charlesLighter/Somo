@@ -136,7 +136,7 @@ public class SubRptFragment extends Fragment {
     }
 
     private void setData() {
-        rptId = firstName+ generateTimeStamp();
+        rptId = generateTimeStamp() + firstName;
         model.setTimestamp(generateTimeStamp());
         model.setReportId(rptId);
         model.setStaffName(localStorage.retrieveData("staff_name"));

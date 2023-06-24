@@ -139,6 +139,7 @@ public class FragmentPg1 extends Fragment {
       localStorage.storeData("session_date", date);
       localStorage.storeData("school", school);
       localStorage.storeData("topic", topic);
+      Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
     }
 
 

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.android.somo.Helpers.LocalStorage;
 import com.android.somo.R;
@@ -44,6 +45,7 @@ public class FragmentPg5 extends Fragment {
     private void saveDataToLocal() {
         localStorage.storeData("next_steps", nextStep);
         localStorage.storeData("feedback", feedback);
+        Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
     }
 
     //** Retrieve data from local storage **/
