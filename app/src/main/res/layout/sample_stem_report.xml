@@ -17,11 +17,29 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:id="@+id/imvUploadSuccess"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_cloud_upload_success"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/lytSchool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="7dp"
-            android:paddingBottom="7dp">
+            android:paddingBottom="7dp"
+            android:layout_toRightOf="@id/imvUploadSuccess">
 
             <TextView
                 android:id="@+id/txtSchoolName"
@@ -47,18 +65,31 @@
             android:layout_height="wrap_content"
             android:paddingTop="7dp"
             android:paddingBottom="7dp"
-            android:layout_below="@id/lytSchool">
+            android:layout_below="@id/lytSchool"
+            android:layout_toRightOf="@id/imvUploadSuccess">
+
+            <TextView
+                android:id="@+id/txtSubtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Submitted on "
+                android:textColor="@color/teal_700"
+                android:textSize="17sp"
+                android:layout_marginStart="10dp"
+                >
+
+            </TextView>
 
             <TextView
                 android:id="@+id/txtDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:text="- -"
                 android:textColor="@color/teal_700"
                 android:textSize="17sp"
-                android:layout_marginStart="10dp"
-                >
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@id/txtSubtDate">
 
             </TextView>
 

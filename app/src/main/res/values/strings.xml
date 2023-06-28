@@ -20,9 +20,9 @@
 
     <!-- Buttons -->
     <string name="txt_rpt_new_session">Report New Session</string>
-    <string name="txt_view_reports">View Your Reports</string>
+    <string name="txt_view_reports">View Your Reports </string>
     <string name="txt_add_new_staff">Add New Staff</string>
-    <string name="txt_view_staff_reports">View Submitted Reports</string>
+    <string name="txt_view_staff_reports">View Submitted Reports </string>
     <string name="staff">Staff</string>
     <string name="admin">Admin</string>
 

@@ -6,19 +6,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.android.somo.AdminActivities.AddNewStaffActivity;
 import com.android.somo.AdminActivities.SubmittedStemRptsActivity;
 import com.android.somo.Constants.Constants;
 import com.android.somo.Models.NotificationModel;
-import com.android.somo.R;
 import com.android.somo.SharedActivities.StemClubReportingActivity;
 import com.android.somo.StaffActivities.StemReportsViewActivity;
 import com.android.somo.databinding.FragmentStemClubBinding;
@@ -26,16 +21,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
-import com.google.firebase.iid.internal.FirebaseInstanceIdInternal;
 
 public class StemClubFragment extends Fragment {
 
     private FragmentStemClubBinding binding;
-
-
     private FirebaseAuth mAuth;
+    private FirebaseDatabase database;
     private boolean isAdmin = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -44,9 +41,14 @@ public class StemClubFragment extends Fragment {
         binding = FragmentStemClubBinding.inflate(inflater, container, false);
         View rootView = binding.getRoot();
 
+        database = FirebaseDatabase.getInstance();
+
         //validate admin
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser().getUid().equals(Constants.ADMIN_UID)){
+        if (mAuth.getCurrentUser().getUid().equals(Constants.ADMIN_1_UID)){
+            isAdmin = true;
+        }
+        if(mAuth.getCurrentUser().getUid().equals(Constants.ADMIN_2_UID)){
             isAdmin = true;
         }
 
@@ -56,6 +58,10 @@ public class StemClubFragment extends Fragment {
             binding.btnViewSubmittedReports.setVisibility(View.VISIBLE);
             obtainFCMToken();
         }
+
+        //show number of reports
+        getAllRptCount();
+        getIndividualRptCount();
 
 
 
@@ -115,6 +121,61 @@ public class StemClubFragment extends Fragment {
                     }
                 });
 
+
+    }
+
+    private void getIndividualRptCount(){
+        database.getReference()
+                .child(Constants.STAFF_REPORTS)
+                .child(mAuth.getCurrentUser().getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        try {
+
+                            if (!snapshot.exists()){
+                                binding.txtRptCount.setText("0");
+                            }else{
+                                long rptCount = snapshot.getChildrenCount();
+                                binding.txtRptCount.setText(String.valueOf(rptCount));
+                            }
+
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Log.d("Firebase Database", "Failed to retrieve staff reports"+ error);
+                    }
+                });
+    }
+
+    private void getAllRptCount(){
+        database.getReference()
+                .child(Constants.SUBMITTED_REPORTS)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        try {
+                            if (!snapshot.exists()){
+                                binding.txtAllRptCount.setText("0");
+                            }else {
+                                long rptCount = snapshot.getChildrenCount();
+                                binding.txtAllRptCount.setText(String.valueOf(rptCount));
+                            }
+
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Log.d("Firebase Database", "Failed to retrieve submitted reports"+ error);
+                    }
+                });
 
     }
 

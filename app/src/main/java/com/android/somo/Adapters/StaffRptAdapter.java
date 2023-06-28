@@ -42,7 +42,7 @@ public class StaffRptAdapter  extends RecyclerView.Adapter<StaffRptAdapter.VIEWH
         holder.txtSchool.setText(model.getSchool());
 
         Date date = new Date(model.getTimestamp());
-        SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("dd-MMM-yy    hh:mm a");
+        SimpleDateFormat simpleDateFormat =  new SimpleDateFormat("dd-MMM-yy   hh:mm a");
         holder.textDate.setText(simpleDateFormat.format(date));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

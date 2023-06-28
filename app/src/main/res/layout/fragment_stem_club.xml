@@ -48,6 +48,7 @@
         android:layout_marginTop="15dp">
 
         <TextView
+            android:id="@+id/txtHint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
@@ -56,6 +57,46 @@
             android:textColor="@color/white"
             android:text="@string/txt_view_reports"
             android:fontFamily="sans-serif-condensed-medium">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtOpenBracket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="("
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_toEndOf="@id/txtHint">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtRptCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text=""
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_toEndOf="@id/txtOpenBracket">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtCloseBracket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text=")"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_toEndOf="@id/txtRptCount">
+
         </TextView>
 
 
@@ -90,7 +131,7 @@
 
     </RelativeLayout>
 
-    <!--Btn add staff -->
+    <!--Btn view submitted reports -->
     <RelativeLayout
         android:id="@+id/btnViewSubmittedReports"
         android:layout_width="match_parent"
@@ -105,7 +146,7 @@
         android:visibility="gone">
 
         <TextView
-
+            android:id="@+id/txtSubRptHint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="8dp"
@@ -114,6 +155,46 @@
             android:textColor="@color/white"
             android:text="@string/txt_view_staff_reports"
             android:fontFamily="sans-serif-condensed-medium">
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/txtOpenBracket1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="("
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_toEndOf="@id/txtSubRptHint">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtAllRptCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text=""
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_toEndOf="@id/txtOpenBracket1">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text=")"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_toEndOf="@id/txtAllRptCount">
+
         </TextView>
 
 

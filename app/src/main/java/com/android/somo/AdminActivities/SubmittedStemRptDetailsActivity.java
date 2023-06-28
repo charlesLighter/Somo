@@ -3,6 +3,9 @@ package com.android.somo.AdminActivities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -12,6 +15,14 @@ import android.widget.Toast;
 import com.android.somo.PDF.PdfGenerator;
 import com.android.somo.R;
 import com.android.somo.databinding.ActivitySubmiitedStemRptDetailsBinding;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.single.PermissionListener;
+
+import java.net.MalformedURLException;
 
 public class SubmittedStemRptDetailsActivity extends AppCompatActivity {
 
@@ -39,6 +50,8 @@ public class SubmittedStemRptDetailsActivity extends AppCompatActivity {
         binding.txtSupport.setText(getIntent().getStringExtra("support_provided"));
         binding.txtNextSteps.setText(getIntent().getStringExtra("next_steps"));
         binding.txtFeedback.setText(getIntent().getStringExtra("feedback"));
+        String firstName = getIntent().getStringExtra("firstName");
+        String rptSubmissionTime = getIntent().getStringExtra("rptSubmissionTime");
 
         //set data to pdf Generator
         pdfGenerator.setDocumentData(getIntent().getStringExtra("staff_name"),
@@ -53,7 +66,8 @@ public class SubmittedStemRptDetailsActivity extends AppCompatActivity {
                 getIntent().getStringExtra("challenges"),
                 getIntent().getStringExtra("support_provided"),
                 getIntent().getStringExtra("next_steps"),
-                getIntent().getStringExtra("feedback"));
+                getIntent().getStringExtra("feedback"),
+                firstName, rptSubmissionTime);
     }
 
     @Override
@@ -67,7 +81,7 @@ public class SubmittedStemRptDetailsActivity extends AppCompatActivity {
         int itemId = item.getItemId();
         switch (itemId){
             case R.id.action_download:
-                downloadReport();
+                requestRuntimePermission();
                 break;
             case R.id.action_locate_file:
                 //TODO: Locate downloaded PDF file from internal storage
@@ -76,15 +90,56 @@ public class SubmittedStemRptDetailsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /*For requesting permission to Write to external storage*/
+    private void requestRuntimePermission(){
+        Dexter.withContext(this)
+                .withPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .withListener(new PermissionListener() {
+                    @Override
+                    public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
+                        downloadReport();
+                    }
+
+                    @Override
+                    public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
+                      if (permissionDeniedResponse.isPermanentlyDenied()){
+
+                          new AlertDialog.Builder(SubmittedStemRptDetailsActivity.this)
+                                  .setTitle("Permission Denied")
+                                  .setMessage("Permission to write to external storage is permanently denied. Please go to settings and enable permission")
+                                  .setNegativeButton("Cancel", null)
+                                  .setPositiveButton("Settings", new DialogInterface.OnClickListener() {
+                                      @Override
+                                      public void onClick(DialogInterface dialog, int which) {
+                                       //TODO: Create intent to access settings
+                                      }
+                                  })
+                                  .show();
+                      }
+                      else {
+                          Toast.makeText(SubmittedStemRptDetailsActivity.this, "Permission denied", Toast.LENGTH_SHORT).show();
+                      }
+                    }
+
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
+                        permissionToken.continuePermissionRequest();
+                    }
+                }).check();
+    }
+
     /** For downloading report in PDF format**/
     private void downloadReport() {
         Toast.makeText(this, "Downloading report...", Toast.LENGTH_SHORT).show();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //TODO: Request permission to write to external storage
-                pdfGenerator.generatePDF();
+                try {
+                    pdfGenerator.generatePDF();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-        }, 3000);
+        }, 4000);
     }
 }

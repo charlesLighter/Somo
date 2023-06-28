@@ -53,6 +53,17 @@ public class StemReportsAdapter extends RecyclerView.Adapter<StemReportsAdapter.
         String submissionDate = simpleDateFormat.format(date);
         holder.txtDate.setText(submissionDate);
 
+        //Extracting a timestamp and staff first name from the report ID
+        String reportId = model.getReportId();
+        String firstName = reportId.replaceAll("[^a-zA-Z]", "");
+        long timestamp = Long.parseLong(reportId.replaceAll("[^\\d]", ""));
+
+        Date mDate = new Date(timestamp);
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyHHmmss");
+        String rptSubmissionTime = sdf.format(mDate);
+
+
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +81,9 @@ public class StemReportsAdapter extends RecyclerView.Adapter<StemReportsAdapter.
                         .putExtra("challenges", model.getChallengesEncountered())
                         .putExtra("support_provided", model.getSupportProvided())
                         .putExtra("next_steps", model.getNextSteps())
-                        .putExtra("feedback", model.getFeedback()));
+                        .putExtra("feedback", model.getFeedback())
+                        .putExtra("firstName", firstName)
+                        .putExtra("rptSubmissionTime", rptSubmissionTime));
             }
         });
 
