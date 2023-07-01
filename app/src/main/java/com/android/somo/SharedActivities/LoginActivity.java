@@ -6,7 +6,11 @@ import androidx.core.content.ContextCompat;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkRequest;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +25,7 @@ import com.android.somo.databinding.ActivityLoginBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -31,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private Dialog popUpDialog;
     private String userEmail;
+    private ConnectivityManager.NetworkCallback networkCallback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +96,6 @@ public class LoginActivity extends AppCompatActivity {
                 if (!edtEmail.getText().toString().isEmpty()){
                    userEmail = edtEmail.getText().toString();
                    sendPswdResetLink(userEmail);
-                   edtEmail.getText().clear();
                 }else {
                     Toast.makeText(LoginActivity.this, "Please provide your email", Toast.LENGTH_SHORT).show();
                 }
@@ -105,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
+                            binding.edtAdminPassword.getText().clear();
                             Toast.makeText(LoginActivity.this, "Password Recovery link sent to " + userEmail, Toast.LENGTH_SHORT).show();
                             popUpDialog.dismiss();
                         }
@@ -141,5 +147,6 @@ public class LoginActivity extends AppCompatActivity {
                 });
 
     }
+
 
 }

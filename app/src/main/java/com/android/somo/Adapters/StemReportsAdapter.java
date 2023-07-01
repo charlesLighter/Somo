@@ -20,6 +20,7 @@ import com.android.somo.StaffActivities.StemRptDetailsActivity;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 public class StemReportsAdapter extends RecyclerView.Adapter<StemReportsAdapter.ReportsViewHolder>{
 
@@ -49,7 +50,7 @@ public class StemReportsAdapter extends RecyclerView.Adapter<StemReportsAdapter.
 
         //Report submission date
         Date date = new Date(model.getTimestamp());
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMM-yy   hh:mm a");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat simpleDateFormat = new SimpleDateFormat("E, dd-MMM-yy   hh:mm a", Locale.getDefault());
         String submissionDate = simpleDateFormat.format(date);
         holder.txtDate.setText(submissionDate);
 

@@ -131,7 +131,7 @@ public class PdfGenerator {
 
 
     public void generatePDF()  {
-        //document it
+        //document id
         String docId = reportingTime + firstname;
         //path
         String filePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
@@ -148,10 +148,10 @@ public class PdfGenerator {
         PdfDocument pdfDocument = new PdfDocument(pdfWriter);
         Document document = new Document(pdfDocument, PageSize.A4);
         //set margins
-        document.setLeftMargin(46f);
-        document.setRightMargin(46f);
-        document.setTopMargin(46f);
-        document.setBottomMargin(46f);
+        document.setLeftMargin(54f);
+        document.setRightMargin(54f);
+        document.setTopMargin(54f);
+        document.setBottomMargin(54f);
 
         // Get the resource id of the logo image
         int imageResId = R.raw.somo_logo;
@@ -163,7 +163,6 @@ public class PdfGenerator {
         // Load the Calibri font
         PdfFont documentFont;
         try {
-            //calibriFont = PdfFontFactory.createFont("fonts/calibri.ttf", "Identity-H", true);
             documentFont = PdfFontFactory.createFont(FontConstants.HELVETICA);
         } catch (IOException e) {
             Toast.makeText(context, "Error loading font: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -453,7 +452,7 @@ public class PdfGenerator {
 
 
             document.close();
-            Toast.makeText(context, "Download successful" + filePath, Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Download successful", Toast.LENGTH_SHORT).show();
         }
         catch (Exception e){
             Toast.makeText(context, "Error adding content to pdf" + e.getMessage(), Toast.LENGTH_SHORT).show();

@@ -27,6 +27,7 @@
             android:layout_weight="1"
             android:text="Prev"
             android:visibility="gone"
+            android:textColor="@color/white"
             android:layout_marginEnd="2dp"
             android:background="@drawable/sqr_green_btn_border"/>
 
@@ -36,8 +37,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Next"
+            android:textColor="@color/white"
             android:layout_marginStart="2dp"
-            />
+            android:background="@drawable/sqr_green_btn_border"/>
 
     </LinearLayout>
 

@@ -1,16 +1,22 @@
 package com.android.somo.SharedActivities;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkRequest;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.android.somo.NetworkServices.InternetDialog;
 import com.android.somo.R;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -111,4 +117,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

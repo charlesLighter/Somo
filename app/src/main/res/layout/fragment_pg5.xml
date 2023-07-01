@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".SharedFragments.FragmentPg2"
     android:background="@color/white"
-    android:paddingStart="15dp"
-    android:paddingEnd="15dp"
     android:paddingTop="20dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
     android:orientation="vertical">
 
     <TextView

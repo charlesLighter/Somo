@@ -17,6 +17,7 @@ public class StemRptDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityStemRptDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().hide();
 
         binding.txtName.setText(getIntent().getStringExtra("staff_name"));
         binding.txtRole.setText(getIntent().getStringExtra("staff_role"));

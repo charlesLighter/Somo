@@ -136,10 +136,8 @@ public class StemClubFragment extends Fragment {
                             if (!snapshot.exists()){
                                 binding.txtRptCount.setText("0");
                             }else{
-                                long rptCount = snapshot.getChildrenCount();
-                                binding.txtRptCount.setText(String.valueOf(rptCount));
+                                binding.txtRptCount.setText(String.valueOf(snapshot.getChildrenCount()));
                             }
-
                         }catch (Exception e){
                             e.printStackTrace();
                         }
@@ -162,10 +160,8 @@ public class StemClubFragment extends Fragment {
                             if (!snapshot.exists()){
                                 binding.txtAllRptCount.setText("0");
                             }else {
-                                long rptCount = snapshot.getChildrenCount();
-                                binding.txtAllRptCount.setText(String.valueOf(rptCount));
+                                binding.txtAllRptCount.setText(String.valueOf(snapshot.getChildrenCount()));
                             }
-
                         }catch (Exception e){
                             e.printStackTrace();
                         }

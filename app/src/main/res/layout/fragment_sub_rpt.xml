@@ -7,9 +7,7 @@
     tools:context=".SharedFragments.SubRptFragment"
     android:background="@color/white"
     android:orientation="vertical"
-    android:paddingTop="15dp"
-    android:paddingStart="7dp"
-    android:paddingEnd="7dp">
+    android:layout_marginTop="20dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -192,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:text="Session Overview"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -239,7 +237,7 @@
                     android:layout_height="wrap_content"
                     android:text="Student Engagement and Participation"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -286,7 +284,7 @@
                     android:layout_height="wrap_content"
                     android:text="Skills and Concepts Demonstrated"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -333,7 +331,7 @@
                     android:layout_height="wrap_content"
                     android:text="Project Progress and Completion"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -380,7 +378,7 @@
                     android:layout_height="wrap_content"
                     android:text="Challenges Encountered"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -427,7 +425,7 @@
                     android:layout_height="wrap_content"
                     android:text="Support and Guidance Provided"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -474,7 +472,7 @@
                     android:layout_height="wrap_content"
                     android:text="Next Steps"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -521,7 +519,7 @@
                     android:layout_height="wrap_content"
                     android:text="Feedback and Suggestions"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -560,11 +558,11 @@
             <Button
                 android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="Submit"
                 android:textColor="@color/white"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0.5dp">
 
             </Button>
 

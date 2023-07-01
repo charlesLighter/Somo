@@ -8,8 +8,9 @@
     android:background="@color/white"
     android:orientation="vertical"
     android:paddingTop="15dp"
-    android:paddingStart="7dp"
-    android:paddingEnd="7dp">
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:paddingBottom="15dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -203,7 +204,7 @@
                     android:layout_height="wrap_content"
                     android:text="Session Overview"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -241,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:text="Student Engagement and Participation"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -279,7 +280,7 @@
                     android:layout_height="wrap_content"
                     android:text="Skills and Concepts Demonstrated"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -317,7 +318,7 @@
                     android:layout_height="wrap_content"
                     android:text="Project Progress and Completion"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -355,7 +356,7 @@
                     android:layout_height="wrap_content"
                     android:text="Challenges Encountered"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -393,7 +394,7 @@
                     android:layout_height="wrap_content"
                     android:text="Support and Guidance Provided"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -431,7 +432,7 @@
                     android:layout_height="wrap_content"
                     android:text="Next Steps"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
@@ -469,7 +470,7 @@
                     android:layout_height="wrap_content"
                     android:text="Feedback and Suggestions"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16sp">
                 </TextView>
 
